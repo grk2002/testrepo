@@ -1,0 +1,11 @@
+---
+- hosts: all
+  remote_user: ragengap
+  become: yes
+  become_method: sudo
+  gather_facts: no
+  tasks:
+   - name: Add user "testuser" to remote server
+     user:
+       name: testusergit
+       state: present
